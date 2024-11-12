@@ -34,6 +34,7 @@ Looking forward, we continue to improve our pre-processing methods, and by the t
 ![Chart](SS1.png)
 
 # Contribution Table
+![Gantt Chart](SS2.png)
 
 | Name           | Midterm Contributions                                                                                                   |
 |----------------|--------------------------------------------------------------------------------------------------------------------------|
