@@ -6,7 +6,7 @@
 
 /ML_GROUP_97/Proposal.md: The github pages for the proposal.
 
-/ML_GROUP_97/Readme.py: Github pages for the midterm checkpoint.
+/ML_GROUP_97/README.py: Github pages for the midterm checkpoint.
 
 /ML_GROUP_97/SS: Added to show the image of chart
 
