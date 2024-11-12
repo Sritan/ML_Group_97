@@ -5,3 +5,9 @@
 /ML_GROUP_97Data_Entry_2017_v2020.csv: This is the csv file that has all of the metadata information for each image, relating to whether or not the image corresponds to one of the different lung diseases.
 
 /ML_GROUP_97/Proposal.md: The github pages for the proposal.
+
+/ML_GROUP_97/MidtermCheckpoint.py: Github pages for the midterm checkpoint.
+
+/ML_GROUP_97/SS: Added to show the image of chart
+
+/ML_GROUP_97/SS1: Added to show the image of results
