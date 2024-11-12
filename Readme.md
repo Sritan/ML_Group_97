@@ -11,3 +11,5 @@
 /ML_GROUP_97/SS: Added to show the image of chart
 
 /ML_GROUP_97/SS1: Added to show the image of results
+
+/ML_GROUP_97/SS2: Added to show the image of Gantt Chart
