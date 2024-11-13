@@ -107,5 +107,4 @@ print(conf_matrix)
 print("\nClassification Report:")
 print(class_report)
  
-# ----------------------- Summary -----------------------
 print("Random Forest Model Completed")
