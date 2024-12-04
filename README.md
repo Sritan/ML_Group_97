@@ -30,19 +30,21 @@ Currently, lung disease is a leading cause of death in the United States, claimi
 For the final project, an accuracy of 9% was achieved using Random Forest. Initially, the class "No Finding" was significantly overrepresented (resulting in a 70% accuracy for this class), as most patients did not have any disease. To address this issue, SMOTE was applied. Given the large number of features, PCA was used to retain 95% of the variance while reducing unnecessary features. To use the pre-trained CNN (ResNet18), black-and-white images were converted to RGB. However, the possibility of patients having multiple diagnoses increased the complexity of the classification problem and contributed to the low accuracy.
 
 The poor performance can be attributed to the general limitations of Random Forest for image classification. Random Forest treats each feature (pixel) independently, failing to capture spatial relationships, which are critical in image data. Additionally, variations in image scale and position further reduced the effectiveness of Random Forest.
-
+![Chart](SS1.png)
 **Image 1:** Random Forest Analytics
 
 An accuracy of 26% was achieved using SVM, which outperformed both Random Forest and random guessing. Random guessing would achieve an accuracy of 11.11% (1/9), meaning SVM achieved 134% better accuracy. Despite this improvement, the accuracy was still below expectations due to issues such as sampling errors caused by multi-class classification.
 
 The SVM model was trained on features extracted by the pre-trained VGG model, reduced to two dimensions using PCA. Although the features appeared messy, SVM was able to classify labels better than Random Forest. The linear kernel's performance highlights the potential of SVM but also points to its limitations due to computational constraints preventing its application to high-dimensional input data.
-
+![Chart](SS5.png)
+![Chart](SS6.png)
 **Images 2 and 3:** SVM Analytics
 
 To improve SVM performance, future iterations should explore multi-class SVM models with higher-dimensional feature inputs and leverage advanced computational resources.
 
 The CNN implementation achieved an accuracy of 81%, a commendable result. However, this high accuracy is misleading as it likely stems from dataset imbalance. Specifically, 81% of the images were labeled as "No Finding," leading the model to develop a bias toward predicting this class. While the use of `BCEWithLogitsLoss()` with `pos_weight` attempted to address class imbalance, the model still converged to predicting "No Finding." Despite additional efforts, such as SMOTE and balanced training sets, the issue persisted.
 
+![Chart](SS4.png)
 **Image 4:** CNN Analytics
 
 Overall, in terms of raw accuracy, CNN performed the best. However, the bias towards "No Finding" limited its generalizability to unseen data. Improvements such as longer training epochs, better sampling strategies, and masking preprocessing systems could help address these shortcomings.
@@ -52,7 +54,7 @@ Based solely on accuracy, CNN appears to be the best algorithm. However, SVM dem
 Future improvements include developing a masking system to improve feature extraction, similar to methods discussed in class. Additional CNN training epochs may help with minority class identification but would require significant computational resources. For all models, implementing a more effective sampling algorithm could help mitigate class imbalances.
 
 # Contribution Table
-![Gantt Chart](SS2.png)
+![Gantt Chart](SS3.png)
 
 | Name           | Midterm Contributions                                                                                                   |
 |----------------|--------------------------------------------------------------------------------------------------------------------------|
