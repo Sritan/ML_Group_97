@@ -30,14 +30,16 @@ Currently, lung disease is a leading cause of death in the United States, claimi
 For the final project, an accuracy of 9% was achieved using Random Forest. Initially, the class "No Finding" was significantly overrepresented (resulting in a 70% accuracy for this class), as most patients did not have any disease. To address this issue, SMOTE was applied. Given the large number of features, PCA was used to retain 95% of the variance while reducing unnecessary features. To use the pre-trained CNN (ResNet18), black-and-white images were converted to RGB. However, the possibility of patients having multiple diagnoses increased the complexity of the classification problem and contributed to the low accuracy.
 
 The poor performance can be attributed to the general limitations of Random Forest for image classification. Random Forest treats each feature (pixel) independently, failing to capture spatial relationships, which are critical in image data. Additionally, variations in image scale and position further reduced the effectiveness of Random Forest.
+
 ![Chart](SS1.png)
 **Image 1:** Random Forest Analytics
 
 An accuracy of 26% was achieved using SVM, which outperformed both Random Forest and random guessing. Random guessing would achieve an accuracy of 11.11% (1/9), meaning SVM achieved 134% better accuracy. Despite this improvement, the accuracy was still below expectations due to issues such as sampling errors caused by multi-class classification.
 
 The SVM model was trained on features extracted by the pre-trained VGG model, reduced to two dimensions using PCA. Although the features appeared messy, SVM was able to classify labels better than Random Forest. The linear kernel's performance highlights the potential of SVM but also points to its limitations due to computational constraints preventing its application to high-dimensional input data.
-![Chart](SS5.png)
+
 ![Chart](SS6.png)
+![Chart](SS5.png)
 **Images 2 and 3:** SVM Analytics
 
 To improve SVM performance, future iterations should explore multi-class SVM models with higher-dimensional feature inputs and leverage advanced computational resources.
@@ -58,11 +60,11 @@ Future improvements include developing a masking system to improve feature extra
 
 | Name           | Midterm Contributions                                                                                                   |
 |----------------|--------------------------------------------------------------------------------------------------------------------------|
-| **Kevin Park** | Wrote the starting backbone code for developing the Random Forest algorithm. Collaborated closely with team members.    |
-| **Srithan Nalluri** | Worked on the written portion, ensuring components are descriptive and up-to-date, and helped normalize images.    |
-| **Sritan**     | Primarily worked on coding, testing, and debugging. Created the README file and uploaded all content to GitHub.         |
-| **Maxi**       | Directed group work, organized work sessions, managed medical-related information, and found a CNN pre-trained on x-rays. |
-| **Yiyang**     | Analyzed imbalance classification significance and conducted exploratory data analysis on meta-features and labels.      |
+| **Kevin Park** | I worked to improve the code for SVM and CNN by extensive testing and modifications. I worked with our team to ensure that we were obtaining valid results from our models.   |
+| **Srithan Nalluri** | I worked on the written portion of the project, along with ensuring that all components are descriptive and up-to-date, and also worked on the code to normalize the images. I also worked on the presentation.   |
+| **Sritan**     | I heavily contributed to the report and figured out reasons for why the code was not working. I also worked on the CNN and SVM code, testing and making changes whenever there were issues. I also made the README file and put everything onto Github.         |
+| **Maxi**       | I directed group work and organized work sessions. I wrote the CNN code, performed pre-processing, and connected it to torchxrayvision. |
+| **Yiyang**     | Worked on the SVM model, creating data sampling method, linking VGG to dimensionality reduction to SVM model. Created visualization methods to validate the sampling methods and model results.      |
 
 # References #
 K. G. van Leeuwen, S. Schalekamp, M. J. C. M. Rutten, B. van Ginneken, and M. de Rooij, “Artificial intelligence in radiology: 100       
